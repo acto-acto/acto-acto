@@ -3,11 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --cli-background: #F9FAFF;
+  --cli-foreground: #00A154;
+  --border: #A3A1A1;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cli-background: var(--cli-background);
+  --color-cli-foreground: var(--cli-foreground);
+  --color-border: var(--border)
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +24,9 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --cli-background: #0A0A0A;
+    --cli-foreground: #00A154;
+    --border: #A3A1A1;
   }
 }
 

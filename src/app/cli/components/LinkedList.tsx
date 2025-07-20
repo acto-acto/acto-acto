@@ -10,9 +10,9 @@ const LinkedList = ({ items }: { items: LinkedListItem[] }) => (
     {items.map((i, idx) => (
       <div
         key={idx}
-        className="flex items-center gap-4 justify-between hover:bg-[#333]"
+        className="flex items-center gap-4 justify-between hover:border-b"
       >
-        <p>{`-> ${i.title}`}</p>
+        <p className="w-[60%] truncate lg:full">{`-> ${i.title}`}</p>
         <div className="space-x-6">
           {i.isOpenSource && (
             <a
