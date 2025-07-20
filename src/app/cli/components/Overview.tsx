@@ -38,7 +38,10 @@ export default function Overview() {
     setPrevCommands((prev) => [...prev, command]);
 
     if (!feature) {
-      setOutputs((prev) => [...prev, <WrongCommand command={command} />]);
+      setOutputs((prev) => [
+        ...prev,
+        <WrongCommand key={prev.length} command={command} />,
+      ]);
     } else {
       if (typeof feature.response === "function") {
         if (feature.command === "clear") {
